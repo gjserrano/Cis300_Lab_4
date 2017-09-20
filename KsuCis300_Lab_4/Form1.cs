@@ -13,11 +13,19 @@ namespace KsuCis300_Lab_4
 {
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// Initializes the UserInterface
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// The EventHandler for the "Open..." section of the uxMenuStrip
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uxOpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if(uxOpenFileDialog.ShowDialog() == DialogResult.OK)
@@ -33,6 +41,11 @@ namespace KsuCis300_Lab_4
             }
         }
 
+        /// <summary>
+        /// The EventHandler for the "Save As..." section of the MenuStrip
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uxSaveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -45,6 +58,10 @@ namespace KsuCis300_Lab_4
             }
         }
 
+        /// <summary>
+        /// A method created to Display errors
+        /// </summary>
+        /// <param name="ex">The error being displayed</param>
         private void DisplayError(Exception ex)
         {
             MessageBox.Show("The following error occured: " + ex);
@@ -65,6 +82,11 @@ namespace KsuCis300_Lab_4
             return (char)(firstLetter + (c - firstLetter + n) % alphabetLen);
         }
 
+        /// <summary>
+        /// Encrypts a specified character
+        /// </summary>
+        /// <param name="inputC">The character being encrypted</param>
+        /// <returns></returns>
         private char Encrypt(char inputC)
         {
             char returnChar = 'a';
@@ -87,6 +109,11 @@ namespace KsuCis300_Lab_4
             return returnChar;
         }
 
+        /// <summary>
+        /// The EventHandler for the "With String..." section of the uxMenuStrip
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uxWithString_Click(object sender, EventArgs e)
         {
             string text = uxTextBox.Text;
@@ -100,6 +127,11 @@ namespace KsuCis300_Lab_4
             uxTextBox.Text = emptyString;
         }
 
+        /// <summary>
+        /// The EventHandler for the "With StringBuilder..." Section of the uxMenuStrip
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uxWithStringBuilder_Click(object sender, EventArgs e)
         {
             StringBuilder build = new StringBuilder();
