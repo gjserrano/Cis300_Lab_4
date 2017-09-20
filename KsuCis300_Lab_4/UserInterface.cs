@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace KsuCis300_Lab_4
 {
-    public partial class Form1 : Form
+    public partial class UserInterface : Form
     {
         /// <summary>
         /// Initializes the UserInterface
         /// </summary>
-        public Form1()
+        public UserInterface()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace KsuCis300_Lab_4
 {
-    partial class Form1
+    partial class UserInterface
     {
         /// <summary>
         /// Required designer variable.
